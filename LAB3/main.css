@@ -1,0 +1,119 @@
+*{
+    box-sizing: content-box;
+}
+
+body{
+    background-color: blanchedalmond;
+    width: 1020px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.IndexBody{
+    margin: 0 auto;
+    max-width: 1020px;
+}
+
+h1{
+    font-family: 'Dela Gothic One', cursive;
+}       
+
+.Dela_font{
+    font-family: 'Dela Gothic One', cursive;
+}
+
+p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+}
+
+div{
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+
+
+.blueFont{
+    color:rgb(128, 128, 241);
+    font-weight: bold;
+}
+ 
+ 
+.inputLable{
+    font-size: 12pt;
+    font-family: tahoma, helvetica, sans-serif;
+}
+
+.Button{
+    border: 3px; width: 100px;
+    border-radius: 15px;
+    background-color:rgb(199, 199, 240);
+    text-align: center;
+    margin-left: 5px; margin-right: 5px;
+}
+
+header{
+    max-width: 1020px;
+    border-style: double;
+    padding: 2px;
+    text-align: left;
+}
+
+
+@keyframes movingHeader{
+    0% {position: relative;
+        left:1020px;}
+    100% {position: relative;
+        left:0px;}
+}
+
+.txt_movingHeader{
+    animation-name: movingHeader;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    font-weight: bold; font-size: 23px;
+}
+
+nav{
+    border-style: groove;
+    font-family: tahoma, helvetica, sans-serif;
+    margin-top: 10px; margin-bottom: 10px; padding: 5px;
+}
+
+
+.box_box_img_transition{
+    /*an outer box that contains 2 boxes*/
+    width: 100%; 
+    display: flex;
+    flex-direction: row; /*in order to display 2 inner box in one row*/
+    justify-content: center;
+}
+
+.box_img_transition{
+    /*a box that contains an image*/
+    margin: 5px;
+    border-style: solid; border-color:azure;
+    width: 200px;
+    height: 200px; 
+    position: relative;
+}
+
+.img_transition{
+    width: 50px; height: 50px;
+    transition: width 2s, height 2s;
+}
+
+.img_transition:hover{
+    /*become bigger when hovering*/
+    width: 200px;
+    height: 200px;
+}
+
+
+#Introduction{
+    column-count: 3; column-gap: 20px; column-rule-style: dotted; column-rule-width: 2px; column-rule-color: gray;
+    text-align: justify; 
+    border-style: groove;
+    padding: .5em; margin: 1em;
+}
+
