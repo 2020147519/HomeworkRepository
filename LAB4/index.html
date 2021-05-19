@@ -26,7 +26,7 @@
 
         <div>
             <aside>
-                <!--Left side banner for entering searching items-->
+                <!-- Banner for entering searching items-->
                 <form>
                     <div>
                         <label for = "searchByCategory">Chosose a category: </label>
@@ -54,11 +54,6 @@
                 <!-- Product images and info  will be displayed here-->
             </main>
         </div>
-
-
-
-
-
 
         <script>
             fetch('product.json')
@@ -93,9 +88,9 @@
                 previousTerm = '';
 
                 // At first(without any categorizing), show all products
-            afterCategorizing = [];
-            afterSearchingTerm = products;
-            // let product, section, productName, productButton;
+                afterCategorizing = [];
+                afterSearchingTerm = products;
+               // let product, section, productName, productButton;
 
                 displayProducts();
 
@@ -172,7 +167,6 @@
                 const productWeight = document.createElement('p');
                 
                 productButton.textContent = '+';
-                // productButton.setAttribute('class', showMoreButton);
                 
                 productName.textContent = product.name;
                 productName.setAttribute('id', 'imageName');
@@ -188,7 +182,6 @@
 
                 section.appendChild(productButton);
 
-                
                 const productPrice = document.createElement('p');
                 productPrice.textContent = product.price;
                 productWeight.textContent = product.weight;
@@ -196,7 +189,7 @@
                 productButton.addEventListener("click", displayInfo);
 
                 function displayInfo(){
-
+                    // display additional info
                     section.appendChild(productPrice);
                     section.appendChild(productWeight);
                 }
