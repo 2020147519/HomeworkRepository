@@ -96,7 +96,7 @@
 
                 afterCategorizing = [];
 
-                countDisplayedProducts = 0;
+ 
                 searchButton.onclick = filtering;
 
             }
@@ -109,6 +109,7 @@
 
                 afterCategorizing = [];
                 afterSearchingTerm = [];
+                countDisplayedProducts = 0;
 
                 // get the user input
                 inputCategory = searchByCategory.value;
@@ -144,7 +145,7 @@
 
             // display Start
             function displayProducts(){
-                countDisplayedProducts = 0;
+                // countDisplayedProducts = 0;
                 // clear the product area
                 while(productArea.firstChild){
                     productArea.removeChild(productArea.firstChild);
@@ -200,7 +201,7 @@
                     
                 if(window.innerHeight + window.scrollY >= document.body.offsetHeight && 
                     countDisplayedProducts < afterSearchingTerm.length){
-                    displayOneProduct(countDisplayedProducts++);
+                    displayOneProduct(countDisplayedProducts);
                 }
             }
 

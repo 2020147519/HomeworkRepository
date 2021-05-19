@@ -33,7 +33,8 @@
         "type":"Souvenir",
         "name": "Yonsei Mini Black Eco Bag",
         "url": "https://www.yonseicoop.com/data/goods/125/12585/F0000000139_1617756750.jpg",
-        "price":"KRW 12,000"
+        "price":"KRW 12,000",
+        "weight" : "200g"
     },
     {
         "type":"Food",
@@ -99,6 +100,13 @@
         "url": "https://image.officedepot.co.kr/item/1000000069326/4.jpg",
         "price":"KRW 2,700",
         "weight" : "30g"
+    },
+    {
+        "type":"Household",
+        "name": "Yonsei Line Salt Bath Towel",
+        "url": "https://www.yonseicoop.com/data/goods/126/12601/F0000000153_1617785269.jpg",
+        "price":"KRW 2,700",
+        "weight" : "234g"
     },
     {
         "type":"Fashion",
