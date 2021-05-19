@@ -1,0 +1,138 @@
+[
+    {
+        "type":"Souvenir",
+        "name": "Yonsei Children's Navy Hood",
+        "url": "https://www.yonseicoop.com/data/goods/126/12600/F0000000152_1617783477.jpg",
+        "price":"KRW 36,000",
+        "weight" : "500g"
+    },
+    {
+        "type":"Souvenir",
+        "name": "Yonsei triangular pennant",
+        "url": "https://www.yonseicoop.com/data/goods/125/12598/F0000000150_1617778790.jpg",
+        "price":"KRW 13,000",
+        "weight" : "100g"
+
+    },
+    {
+        "type":"Souvenir",
+        "name": "Yonsei Eagle Doll/Haksamo",
+        "url": "https://www.yonseicoop.com/data/goods/127/12758/F0000000187_1620962922.jpg",
+        "price":"KRW 22,000",
+        "weight" : "300g"
+    },
+    {
+        "type":"Souvenir",
+        "name": "4 types of Yonsei mark stickers",
+        "url": "https://www.yonseicoop.com/data/goods/56/5640/F0200075_1613367576.jpg",
+        "price":"KRW 2,500",
+        "weight" : "50g"
+        
+    },
+    {
+        "type":"Souvenir",
+        "name": "Yonsei Mini Black Eco Bag",
+        "url": "https://www.yonseicoop.com/data/goods/125/12585/F0000000139_1617756750.jpg",
+        "price":"KRW 12,000"
+    },
+    {
+        "type":"Food",
+        "name": "Ganghwa Island Rice Sikhye (15)",
+        "url": "https://www.yonseicoop.com/data/goods/127/12710/15.jpg",
+        "price":"KRW 20,000",
+        "weight" : "1Kg"
+    },
+    {
+        "type":"Food",
+        "name": "Yonsei Capsule Coffee Sophomore",
+        "url": "https://www.yonseicoop.com/data/goods/125/12592/F0000000144_1617760543.jpg",
+        "price":"KRW 6,600",
+        "weight" : "200g"
+    },
+    {
+        "type":"Food",
+        "name": "Yonsei-Ulleung deep sea water 500 mm",
+        "url": "https://www.yonseicoop.com/data/goods/123/12367/H500ml_1618550440.jpg",
+        "price":"KRW 13,200",
+        "weight" : "500g"
+    },
+    {
+        "type":"Food",
+        "name": "Whiteheim (2 boxes)",
+        "url": "https://www.yonseicoop.com/data/goods/55/5563/F0000000178_1619169670.jpg",
+        "price":"KRW 12,000",
+        "weight" : "284g"
+
+    },
+    {
+        "type":"Food",
+        "name": "Premium Sunsik",
+        "url": "https://www.yonseicoop.com/data/goods/53/5357/F0000000155_1618877545.png",
+        "price":"12,500 won",
+        "weight" : "340g"
+
+    },
+    {
+        "type":"Household",
+        "name": "Three-tiered celebration wreath",
+        "url": "https://www.yonseicoop.com/data/goods/126/12615/KakaoTalk_20210409_142441764.jpg",
+        "price":"100,000 won",
+        "weight" : "3kg"
+    },
+    {
+        "type":"Household",
+        "name": "Lotte Sanitary Roll Pack",
+        "url": "https://image.officedepot.co.kr/item/883902/4.jpg",
+        "price":"KRW 4,300",
+        "weight" : "200g"
+    },
+    {
+        "type":"Household",
+        "name": "Digital kitchen scale",
+        "url": "https://image.officedepot.co.kr/item/883824/4.jpg",
+        "price":"KRW 33,000",
+        "weight" : "290g"
+    },
+    {
+        "type":"Household",
+        "name": "Adsorption hanger",
+        "url": "https://image.officedepot.co.kr/item/1000000069326/4.jpg",
+        "price":"KRW 2,700",
+        "weight" : "30g"
+    },
+    {
+        "type":"Fashion",
+        "name": "Sketchers Women's Max Cushioning Elite",
+        "url": "https://www.yonseicoop.com/data/goods/123/12361/SP0WR21X121_6.JPG",
+        "price":"KRW 107,100",
+        "weight" : "440g"
+    },
+    {
+        "type":"Fashion",
+        "name": "Yonsei duck down long padding (black, white)",
+        "url": "https://www.yonseicoop.com/data/goods/5/557/F0200035_1616477440.png",
+        "price":"KRW 120,000",
+        "weight" : "500g"
+    },
+    {
+        "type":"Fashion",
+        "name": "MacBook 13.3-inch Case Tablet Laptop Pouch",
+        "url": "https://www.yonseicoop.com/data/goods/109/10957/2083621605_j02Tk1vV_1609297041_img22.jpg",
+        "price":"KRW 24,000",
+        "weight" : "130g"
+    },
+    {
+        "type":"Fashion",
+        "name": "Yonsei Hoodie (Gray)",
+        "url": "https://www.yonseicoop.com/data/goods/5/543/F0000000084_1616144720.jpg",
+        "price":"KRW 40,000",
+        "weight" : "300g"
+    },
+    {
+        "type":"Fashion",
+        "name": "Yonsei Boa Wool Zip Business",
+        "url": "https://www.yonseicoop.com/data/goods/15/1541/F0200055_1_1615356198.jpg",
+        "price":"KRW 59,000",
+        "weight" : "880g"
+    }
+]

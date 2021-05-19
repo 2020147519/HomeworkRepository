@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Index.html</title>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">    
+        <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto+Slab:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500&family=Pattaya&family=Roboto+Slab:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body class = "IndexBody">
+
+        <header>
+            <p class = "txt_movingHeader Dela_font">Welcome to Yonsei Mall! </p>
+        
+            <nav>
+                <span class = "Button"><a href = "login.html">Login Page</a></span>
+                <span class = "Button"><a href = "signup.html">SignUp page</a></span>
+             
+            </nav>
+        </header>
+
+        <div>
+            <aside>
+                <!--Left side banner for entering searching items-->
+                <form>
+                    <div>
+                        <label for = "searchByCategory">Chosose a category: </label>
+                        <select id = "searchByCategory">
+                            <option selected>All</option>
+                            <option>Souvenir</option>
+                            <option>Food</option>
+                            <option>Household</option>
+                            <option>Fashion</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="searchByTerm">Search by term: </label>
+                        <input type="text" id="searchByTerm" placeholder="(ex)Souvenir">
+                    </div>
+
+                    <div>
+                        <button>Find results</button>
+                    </div>
+                </form>
+            </aside>
+
+            <main>
+                <!-- Product images and info  will be displayed here-->
+            </main>
+        </div>
+
+
+
+
+
+
+        <script>
+            fetch('product.json')
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(json){
+                let products = json;
+                initialize(products);
+            })
+            .catch(function(err){
+                console.log('Fetch problem: ' + err.message);
+            });
+            
+            const searchByCategory = document.querySelector('#searchByCategory');
+            const searchByTerm = document.querySelector('#searchByTerm');
+            const searchButton = document.querySelector('button');
+            const productArea = document.querySelector('main');
+
+            let countDisplayedProducts = 0;
+
+            let previousCategory, previousTerm, afterCategorizing, afterSearchingTerm;
+            let allProducts, product, section, productName, productButton, productWeight;
+
+            let inputCategory, inputTerm;
+
+
+            function initialize(products){
+
+                allProducts = products;
+                previousCategory = searchByCategory.value;
+                previousTerm = '';
+
+                // At first(without any categorizing), show all products
+            afterCategorizing = [];
+            afterSearchingTerm = products;
+            // let product, section, productName, productButton;
+
+                displayProducts();
+
+                afterCategorizing = [];
+
+                countDisplayedProducts = 0;
+                searchButton.onclick = filtering;
+
+            }
+
+            // filtering start
+            function filtering(e){
+
+                let products = allProducts;
+                e.preventDefault();
+
+                afterCategorizing = [];
+                afterSearchingTerm = [];
+
+                // get the user input
+                inputCategory = searchByCategory.value;
+                previousCategory = inputCategory;
+                inputTerm = searchByTerm.value.trim().toLowerCase();
+                previousTerm = inputTerm;
+
+
+                if(inputCategory == 'All'){
+                    afterCategorizing = products;
+                }
+                else{
+                    for(let i =0; i < products.length; i++){
+                        // Select products corresponding to the input category
+                        if(products[i].type === inputCategory){
+                            afterCategorizing.push(products[i]);
+                        }
+                    }
+                }
+
+
+                // implement SEARCHING TERM
+                for(let i=0; i < afterCategorizing.length; i++){
+                    if(afterCategorizing[i].name.toLowerCase().includes(inputTerm)){
+                        afterSearchingTerm.push(afterCategorizing[i]);
+                    }
+                }
+
+                displayProducts(); 
+            }
+            // filtering end
+
+
+            // display Start
+            function displayProducts(){
+                countDisplayedProducts = 0;
+                // clear the product area
+                while(productArea.firstChild){
+                    productArea.removeChild(productArea.firstChild);
+                }        
+
+
+                // display only first 4 itmes on screen
+                for(let i=0; i < 4; i++){
+                    displayOneProduct(i);
+                }
+
+            }
+            //display ENd
+
+            function displayOneProduct(i){
+                const product = afterSearchingTerm[i];
+                const section = document.createElement('section');
+                const productName = document.createElement('p');
+                const productButton = document.createElement('button');
+                const productWeight = document.createElement('p');
+                
+                productButton.textContent = '+';
+                // productButton.setAttribute('class', showMoreButton);
+                
+                productName.textContent = product.name;
+                productName.setAttribute('id', 'imageName');
+
+
+                productArea.appendChild(section);
+                section.appendChild(productName);
+                
+                const productImg = document.createElement('img');
+                productImg.src = product.url;
+                productImg.alt = product.name;
+                section.appendChild(productImg);
+
+                section.appendChild(productButton);
+
+                
+                const productPrice = document.createElement('p');
+                productPrice.textContent = product.price;
+                productWeight.textContent = product.weight;
+
+                productButton.addEventListener("click", displayInfo);
+
+                function displayInfo(){
+
+                    section.appendChild(productPrice);
+                    section.appendChild(productWeight);
+                }
+                countDisplayedProducts++;
+            }
+
+            window.onscroll = () =>{
+                    
+                if(window.innerHeight + window.scrollY >= document.body.offsetHeight && 
+                    countDisplayedProducts < afterSearchingTerm.length){
+                    displayOneProduct(countDisplayedProducts++);
+                }
+            }
+
+        </script>
+
+    </body>
+
+
+</html>
